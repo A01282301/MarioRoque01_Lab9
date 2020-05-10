@@ -1,0 +1,64 @@
+.all{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-wrap: wrap;
+    text-align: center;
+    color: blueviolet;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.show{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: dotted;
+    justify-content: space-around;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+.get{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: dotted;
+    justify-content: space-around;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+.postBookmark{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: dotted;
+    justify-content: space-around;
+    margin: 10px 10px;
+    padding: 20px;
+}
+
+label{
+    padding: 5px;
+
+}
+.btn{
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.patch{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: dotted;
+    justify-content: space-around;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+}
