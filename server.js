@@ -138,7 +138,7 @@ app.listen(8080, ()=>{
     console.log("Server running on http port");
 
 new Promise( (resolve, reject)=>{
-        mongoose.connect( "mongodb://localhost/bookmarksdb", 
+        mongoose.connect( "mongodb://localhost/mongodb+srv://admin:<admin>@cluster0-bsz5b.mongodb.net/bookmarksdb?retryWrites=true&w=majority", 
         {useNewUrlParser : true, useUnifiedTopology: true}, (err)=>{
             if(err)
                 reject(err);
