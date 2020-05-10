@@ -8,7 +8,7 @@ const {Bookmarks} = require("./bookmarksModel.js");
 const mongoose = require('mongoose');
 const cors = require( './middleware/cors' );
 const APIKEY = "2abbf7c3-245b-404f-9473-ade729ed4653";
-
+const {DATABASE_URL, PORT} = required('./config');
 app.use(cors);
 app.use(express.static("public"));
 app.use(morgan('dev'));
@@ -134,11 +134,11 @@ app.patch( '/bookmark/:id', jsonParser, (req, res)=>{
     return res.status(404).end()})
 });
 
-app.listen(8080, ()=>{
+app.listen(PORT, ()=>{
     console.log("Server running on http port");
 
 new Promise( (resolve, reject)=>{
-        mongoose.connect( "mongodb://localhost/mongodb+srv://admin:<admin>@cluster0-bsz5b.mongodb.net/bookmarksdb?retryWrites=true&w=majority", 
+        mongoose.connect( "DATABASE_URL", 
         {useNewUrlParser : true, useUnifiedTopology: true}, (err)=>{
             if(err)
                 reject(err);
