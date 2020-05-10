@@ -8,7 +8,7 @@ const {Bookmarks} = require("./bookmarksModel.js");
 const mongoose = require('mongoose');
 const cors = require( './middleware/cors' );
 const APIKEY = "2abbf7c3-245b-404f-9473-ade729ed4653";
-const {DATABASE_URL, PORT} = required('./config');
+const {DATABASE_URL, PORT} = require('./config');
 app.use(cors);
 app.use(express.static("public"));
 app.use(morgan('dev'));
@@ -138,7 +138,7 @@ app.listen(PORT, ()=>{
     console.log("Server running on http port");
 
 new Promise( (resolve, reject)=>{
-        mongoose.connect( "DATABASE_URL", 
+        mongoose.connect( DATABASE_URL, 
         {useNewUrlParser : true, useUnifiedTopology: true}, (err)=>{
             if(err)
                 reject(err);
