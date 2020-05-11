@@ -7,48 +7,52 @@
         <link href="./css/index.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+    <section class = "error"> </section>
     <section class = "all">
     <form class="postBookmark">
         <h2> Post a bookmark! </h2>
             
         <label for="Title"> Title: </label>
-        <input type="text" id= "Title"> 
+        <input type="text" id= "addTitle"> 
             
         <label for="Description"> Description: </label>
-        <input type="text" id= "Description">   
+        <input type="text" id= "addDescription">   
             
         <label for="Url"> Url: </label>
-        <input type="text" id= "Url">
+        <input type="text" id= "addUrl">
             
         <label for="Rating"> Rating: </label>
-        <input type="number" id= "Rating">
+        <input type="number" id= "addRating">
         <div class = "btn"> 
-        <button id="submit" type="submit"> Post Bookmark </button>
+        <button id= "submit" type="submit"> Post Bookmark </button>
         </div>
+        
     </form>
 
     <form class="patch">
         <h2>Update a bookmark information!</h2>
-            
+        
+        </div>
         <label for="Title"> Title: </label>
-        <input type="text" id="Title"> 
+        <input type="text" id="updateTitle"> 
             
         <label for="Description"> Description: </label>
-        <input type="text" id="Description">   
+        <input type="text" id="updateDescription">   
             
         <label for="Url">Url:</label>
-        <input type="text" id="Url">
-            
+        <input type="text" id="updateUrl">
+      
         <label for="Rating"> Rating: </label>
-        <input type="number" id= "Rating">
-       
+        <input type="number" id= "updateRating">
+    
+
         <div class = "btn"> 
-            <button id="submit" type="submit"> Update Bookmark </button>
+            <button id="submitUpdate" type="submit"> Update Bookmark </button>
         </div>
 
     </form>
         
-    <form class="get">
+    <form class="get">  
         <h2> Get a bookmark! </h2>
         <label for="bookmarkTitle"> Boomark Title: </label>
         <input type="text" id="getTitle">
@@ -58,10 +62,11 @@
 
     </form>
 </div>
+<section class="search">
+
+</section>
     </section>
     <section class="show">
-
-
     </section>
         <script src="./js/index.js"></script>
     </body>

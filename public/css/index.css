@@ -1,8 +1,6 @@
 .all{
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    flex-wrap: wrap;
+    flex-direction: row;
     text-align: center;
     color: blueviolet;
     font-family: sans-serif;
@@ -41,15 +39,32 @@
 
 label{
     padding: 5px;
-
 }
-.btn{
+
+
+
+button{
+
     margin-top: 5px;
     justify-content: center;
     align-items: center;
 }
-
 .patch{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: dotted;
+    justify-content: space-around;
+    margin: 10px 10px;
+    padding: 20px;
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+.bookmark{
     display: flex;
     flex-direction: column;
     height: auto;
@@ -58,7 +73,7 @@ label{
     margin: 10px 10px;
     padding: 10px;
 }
-
-h2 {
+.error{
     text-align: center;
+    color: red;
 }
