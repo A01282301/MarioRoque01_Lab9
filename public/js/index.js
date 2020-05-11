@@ -222,7 +222,6 @@ function SearchBookmark( title ){
         });
 }
 
-//////////////////////////////////////////////////////////////////////
 function UpdateBookmark( id, title, description, urlbookmark, rating ){
     let url = `/bookmark/${id}`;
     let error = document.querySelector( '.error' );
