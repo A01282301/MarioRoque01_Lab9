@@ -313,6 +313,40 @@ function getUpdateInformation(){
   
 }
 
+function SearchEdit(){
+    let bookmarksList = document.querySelector( '.search' );
+    bookmarksList.addEventListener( 'click', (event)=>{
+        event.preventDefault();
+
+        if( event.target.matches( '#edit' ) ){
+            let title = event.target.parentNode.parentNode.querySelector('.title').innerHTML;
+            let description = event.target.parentNode.parentNode.parentNode.querySelector('.description').innerHTML;
+            let url = event.target.parentNode.parentNode.querySelector('.url').innerHTML;
+            let rating = event.target.parentNode.parentNode.parentNode.querySelector('.ratings').innerHTML;
+            let id = event.target.parentNode.parentNode.id;
+            document.getElementById('updateTitle').value = title;
+            document.getElementById('updateDescription').value = description;
+            document.getElementById('updateRating').value = rating;
+            document.getElementById('updateUrl').value = url;
+
+            let update = document.querySelector( '#submitUpdate' );
+            update.addEventListener( 'click', (event)=>{
+            event.preventDefault();
+            if(event.target.matches( '#submitUpdate' ) ){
+                title =  document.getElementById('updateTitle').value;
+                description = document.getElementById('updateDescription').value;
+                rating = document.getElementById('updateRating').value;
+                url =   document.getElementById('updateUrl').value;
+                console.log(title);
+                UpdateBookmark(id, title, description, url, rating);
+            }
+            });
+
+        }
+        });
+  
+}
+
 function init(){
     getAll();
     addBookmarkInfo();
