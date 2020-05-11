@@ -353,6 +353,7 @@ function init(){
     CheckDelete();
     bookmarkInfo();
     getUpdateInformation();
+    SearchEdit();
 }
 
 init();
