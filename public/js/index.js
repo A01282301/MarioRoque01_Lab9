@@ -202,7 +202,7 @@ function SearchBookmark( title ){
                     <div class="info">
                     <label>Description: </label> <label class= "description"> ${responseJSON[i].description}</label>
                         <div class="rating">
-                            <label>Rating: </label><label class="rating">${responseJSON[i].rating}</label>
+                            <label>Rating: </label><label class="ratings">${responseJSON[i].rating}</label>
                         </div>
                         
                         <label>URL: </label>  <a class="url" href=" ${responseJSON[i].url} ">${responseJSON[i].url}</a>
